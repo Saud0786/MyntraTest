@@ -8,7 +8,5 @@ public class Base {
 	public Base(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
-		
 	}
-
 }

@@ -5,24 +5,19 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
- 
-class DriverNotFound extends Exception{
-	public DriverNotFound(String message) {
-		super(message);
-	}
-}
 
 public class ScreenShotUtils {
 
-    public String captureScreenShot(String testName) throws DriverNotFound,IOException {
+    public String captureScreenShot(String testName) throws IOException {
 
-        WebDriver driver = DriverFactory.driver; // use existing driver
+        WebDriver driver = DriverFactory.getDriver(); // use existing driver
 
         if (driver == null) {
-            throw new DriverNotFound("Driver not found");
+            throw new RuntimeException("Driver not found");
         }
 
         TakesScreenshot tScreenshot = (TakesScreenshot) driver;

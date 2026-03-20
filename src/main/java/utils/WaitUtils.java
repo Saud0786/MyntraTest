@@ -9,7 +9,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WaitUtils {
-   WebDriver driver = DriverFactory.driver;
+   	
+   WebDriver driver = DriverFactory.getDriver();
    WebDriverWait wait;
    
    public WaitUtils() {
@@ -28,6 +29,4 @@ public class WaitUtils {
    public void waitForElementsVisible(List<WebElement> element) {
 	     wait.until(ExpectedConditions.visibilityOfAllElements(element));
   }
-   
-   
 }

@@ -5,9 +5,9 @@
     <classes>
       <class name="tests.SearchProductPageTest">
         <methods>
-          <include name="verifySearchProduct"/>
+          <include name="initialize"/>
+          <include name="verifyMobilePhonesPage"/>
           <include name="teardown"/>
-          <include name="initMethod"/>
           <include name="setup"/>
         </methods>
       </class> <!-- tests.SearchProductPageTest -->

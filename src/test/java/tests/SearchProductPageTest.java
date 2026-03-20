@@ -15,7 +15,7 @@ public class SearchProductPageTest extends BaseTest {
         sp = new SearchProductPage(driver);
     }
 
-    @Test
+    @Test()
     public void verifyMobilePhonesPage() {
 
         // Step 1: Click Mobile Phones
@@ -29,7 +29,7 @@ public class SearchProductPageTest extends BaseTest {
         String actualText = sp.getHeadingText();
 
         Assert.assertEquals(actualText,
-                "Buy Second Hand Mobile Phones in India",
+                "Buy Second Han Mobile Phones in India",
                 "Heading text mismatch!");
     }
 }

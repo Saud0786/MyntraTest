@@ -26,26 +26,26 @@ public class TestListener implements ITestListener {
         System.out.println("Test Started: " + result.getName());
     }
 
-    @Override
-    public void onTestSuccess(ITestResult result) {
-        test.pass("Test Passed");
-        //testpass me throwable nahi likhte hai
-      //test.pass(result.getThrowable());
-        
-        
-        try {
-        	ScreenShotUtils ss = new ScreenShotUtils();
-        	String path = ss.captureScreenShot(result.getName());
-               
-        	test.addScreenCaptureFromPath(path);
-        }catch(Exception e) {
-                  e.printStackTrace();
-        
-        
-        System.out.println("Test Passed: " + result.getName());
-    }
-    }
-    
+//    @Override
+//    public void onTestSuccess(ITestResult result) {
+//        test.pass("Test Passed");
+//        //testpass me throwable nahi likhte hai
+//      //test.pass(result.getThrowable());
+//        
+//        
+//        try {
+//        	ScreenShotUtils ss = new ScreenShotUtils();
+//        	String path = ss.captureScreenShot(result.getName());
+//               
+//        	test.addScreenCaptureFromPath(path);
+//        }catch(Exception e) {
+//                  e.printStackTrace();
+//        
+//        
+//        System.out.println("Test Passed: " + result.getName());
+//    }
+//    }
+//    
     @Override
     public void onTestFailure(ITestResult result) {
         test.fail("Test Failed");
